@@ -1,11 +1,17 @@
 import React from "react"
 
 const Footer = () => {
+  const emailSubscription = (e) => {
+    e.preventDefault()
+    alert("Thank you for subscribing to our newsletter!")
+  }
   return (
     <div>
       <div className="flex flex-col items-center justify-center align-middle">
-        <h1 className="text-white text-center text-[30px]">threads made</h1>
-        <span className="easy_footer text-[3.4em] text-blue-400 font-bold">
+        <h1 className="text-white text-center text-[30px] z-10">
+          threads made
+        </h1>
+        <span className="easy_footer z-10 text-[3.4em] text-blue-400 font-bold">
           easy.
         </span>
         <form className="flex m-8">
@@ -14,7 +20,10 @@ const Footer = () => {
             placeholder="Enter your email"
             className="bg-[#181823] text-white w-[80%] p-4 rounded-l-full"
           />
-          <button className="subscribe_btn bg-blue-400 text-white p-4 rounded-r-full font-semibold">
+          <button
+            className="subscribe_btn bg-blue-400 text-white p-4 rounded-r-full font-semibold"
+            onClick={emailSubscription}
+          >
             Subscribe
           </button>
         </form>
